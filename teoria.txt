@@ -1,0 +1,17 @@
+#####################  CLASE 2  #####################
+
+[[[ Single-Threading vs Multi-Threading ]]]
+
+Single-Threading: (modelo que usa Node.js)
+    * Un hilo principal con event loop.
+    * Delega tareas bloqueantes.
+    * Altamente escalable.
+
+Multi-Threading:
+    * Multiples hilos simultaneo
+    * Ideal para tareas de CPU intensivas
+    * Mas complejo
+
+
+Documentacion OFICIAL DE Node.js: 
+    https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
