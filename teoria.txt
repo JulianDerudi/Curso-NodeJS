@@ -1,6 +1,6 @@
-#####################  CLASE 2  #####################
+##############################  CLASE 2  ##############################
 
-[[[ Single-Threading vs Multi-Threading ]]]
+[[[  Single-Threading vs Multi-Threading  ]]]
 
 Single-Threading: (modelo que usa Node.js)
     * Un hilo principal con event loop.
@@ -15,3 +15,65 @@ Multi-Threading:
 
 Documentacion OFICIAL DE Node.js: 
     https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
+
+
+
+##############################  CLASE 3  ##############################
+
+[[[  Tipos de Declaraciones de Funciones  ]]]
+
+Funciones Declaradas:
+    function search() {
+        // proceso encapsulado
+    }
+
+Funciones Expresadas:
+    const search = function () {
+        // proceso encapsulado
+    }
+
+Arrow Functions:
+    const search = () => {
+        // proceso encapsulado
+    }
+
+
+[[[  Higher Order Functions (HOF) o callbacks  ]]]
+
+// Donde la funciones son pasadas por parametro 
+
+function calculator(a, b, action) {
+    return action(a,b);
+}
+
+console.log(calculator(20, 10, (a, b) => a + b)); // 30
+
+
+[[[  ARRAYS  ]]]
+
+Metodos de array: 
+    * arrayName[index]: para acceder a elementos precisos.
+    * .lenght: para la longitud.
+    * Push y Unshift: añaden elementos al inicio y final.
+    * Pop y Shift: eliminan elementos del inicio y final.
+    * .join(): une elementos de un array en una cadena.
+    * .map(): crea un nuevo array con los resultados de una funcion.
+    * .filter(): crea un nuevo array con elementos que pasan una prueba.
+    * .reduce(): reduce un array a un solo valor acumulado.
+
+Iteracion de array:
+    * ForEach: ejecuta una función para cada elemento del array.
+    * For...of: permite recorrer elementos de forma mas sencilla que un for tradicional.
+
+
+[[[  TEMPLATE LITERALS  ]]]
+
+// Cadenas de texto que permiten expresiones incrustadas.
+// se usan backticks (`) y permite insertar variables usando ${expresión}.
+
+
+[[[ GUIAS ]]]
+
+Sobre funciones, arrays y template literals: MDN Web Docs
+Libro interactivo para profundizar estos conceptos: Eloquent JavaScript
+    
