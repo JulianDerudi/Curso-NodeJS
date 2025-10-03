@@ -156,3 +156,46 @@ class Super extends Hero {
 
     const producto = {...viejoProducto, ...nuevoProducto};
     //               {id:1, precio:120, nombre:"peruanoide"};
+
+
+
+
+##############################  CLASE 5  ##############################
+
+[[[  NPM  ]]]
+* Gestion de Paquetes
+* Configuracion de Proyectos
+* Scripts Personalizados
+
+// Modulos Externos
+$npm install [paquete]
+$npm update [paquete]
+$npm uninstall [paquete]
+
+// Modulos Nativos
+- Como 'fs', 'http', etc.
+
+// Modulos Internos
+- nuestros propios modulos
+
+
+[[[  CommonJS vs ES Modules  ]]]
+* CommonJS:
+    - Utiliza 'require()' y 'module.exports'.
+        + const cowsay = require("cowsay");
+        + const { say } = require("cowsay");
+    - Es síncronico y compatible con Node.js.
+
+* ES Modules:
+    - Usa 'import' y 'export'.
+        + import cowsay from "cowsay";
+        + import { say } from "cowsay";
+    - Es asíncronico y estandar en JavaScript moderno.
+
+
+[[[  Dirname  ]]]
+
+
+
+[[[  Rutas  ]]]
+
