@@ -76,4 +76,83 @@ Iteracion de array:
 
 Sobre funciones, arrays y template literals: MDN Web Docs
 Libro interactivo para profundizar estos conceptos: Eloquent JavaScript
-    
+
+
+
+##############################  CLASE 4  ##############################
+
+[[[  OBJETOS  ]]]
+* Objetos literal:
+        const hero = {
+            alias: 'Cody',
+            powers: ['fly', 'nightvision', 'stregth'],
+            vitality: 100,
+            drecreaseVitality: function(damage) {
+                return this.vitality - damage
+            }
+        }
+
+        hero.alias = 'Julian' //Cambiar valor
+        hero[alias] = 'Julian' //Cambiar valor
+        delete hero.alias //eliminar campo
+
+
+* Objeto Funcional:
+        function Hero(alias, vitality) {
+            this.alias = alias;
+            this.vitality = vitality;
+
+            this.drecreaseVitality = function(damage) {
+                return this.vitality - damage
+            };
+        }
+
+        const hero = new Hero('Cody', 100); //Recien acá tengo el objeto literal
+
+
+[[[  CLASES  ]]]
+class Hero {
+    constructor(alias, vitality) {
+        this.alias = alias;
+        this.vitality = vitality;
+    }
+
+    drecreaseVitality(damage) {
+        return this.vitality - damage
+    };
+}
+
+const hero = new Hero('Cody', 100);
+
+
+[[[  HERENCIA  ]]]
+class Super extends Hero {
+    constructor(alias, vitality, power){
+        super(alias, vitality);
+        this.power = power;
+    }
+}
+
+
+[[[  OPERADORES AVANZADOS  ]]]
+* Destructuring Operator:
+    const user = [1, 'Juan', 33, 'admin'];
+
+    const [id, nombre, edad, rol] = user;
+
+* Spread Operator:
+    // con ARRAY
+    const numeros = [1, 2, 3];
+    const letras = ['a', 'b', 'c'];
+
+    // const array = numeros.concat(letras);
+    const array = [...numeros, ...letras];
+    //            [1, 2, 3, 'a', 'b', 'c'];
+
+
+    // con OBJETOS
+    const viejoProducto = {id:1, nombre:"peruano"};
+    const nuevoProducto = {precio:120, nombre:"peruanoide"};
+
+    const producto = {...viejoProducto, ...nuevoProducto};
+    //               {id:1, precio:120, nombre:"peruanoide"};

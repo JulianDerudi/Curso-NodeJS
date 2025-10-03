@@ -23,3 +23,55 @@ function mostrarResultados(array) {
 mostrarResultados(preciosConIVA);
 console.log(" "); console.log(" "); console.log(" ");
 
+
+
+/*   CLASE 4   */
+// Mision 1:
+// 1)
+class Automovil {
+  constructor(marca, modelo, año, color){
+    this.marca = marca;
+    this.modelo = modelo;
+    this.año = año;
+    this.color = color;
+  }
+}
+
+const auto1 = new Automovil('marca1', 'modelo1', 2002, 'Azul');
+const auto2 = new Automovil('marca2', 'modelo1', 2012, 'Rojo');
+const auto3 = new Automovil('marca1', 'modelo2', 2005, 'Azul');
+const auto4 = new Automovil('marca1', 'modelo1', 2008, 'Gris');
+const auto5 = new Automovil('marca3', 'modelo4', 2009, 'Azul');
+const auto6 = new Automovil('marca2', 'modelo2', 2015, 'Gris');
+const auto7 = new Automovil('marca1', 'modelo3', 2023, 'Rojo');
+const auto8 = new Automovil('marca3', 'modelo1', 2022, 'Azul');
+const auto9 = new Automovil('marca3', 'modelo2', 2012, 'Rojo');
+const auto10 = new Automovil('marca1', 'modelo3', 2018, 'Azul');
+
+const autos = [auto1, auto2, auto3, auto4, auto5, auto6, auto7, auto8, auto9, auto10];
+
+// 2)
+function autosMayoresA2018(autos) {
+  autos.forEach(auto => {
+        if(auto.año > 2018){
+          console.log(auto);
+        }
+    });
+}
+
+autosMayoresA2018(autos); console.log('');
+
+
+// Mision 2:
+// 1)
+function cantidadDeAutosDeColor(autos, color) {
+  count = 0;
+  autos.forEach(auto => {
+    if(auto.color === color){
+      count++;
+    }
+  });
+  return count;
+}
+
+console.log(`Cantidad de autos de color Azul: ${cantidadDeAutosDeColor(autos, 'Azul')} `);
