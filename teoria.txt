@@ -194,8 +194,24 @@ $npm uninstall [paquete]
 
 
 [[[  Dirname  ]]]
+* el path actual
+    ________________________________________________________
+    | En html:
+    | 
+    | "./img/foto.jpg"             EXPLICACION DE AGUS CODE
+    | 
+    | En node.js:
+    | 
+    | rutaFoto = path.join(__dirname, "img", "foto.jpg");
+    |_______________________________________________________
 
+* en CommonJS: __dirname
+* en Module: es mas complicado
+    import { dirname } from "node:path";
+    import { fileURLToPath } from "node:url";
 
+    const __filename = fileURLToPath(import.meta.url);  //path
+    const __dirname = dirname(__filename);
 
 [[[  Rutas  ]]]
 
