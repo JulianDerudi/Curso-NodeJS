@@ -1,10 +1,15 @@
 /*   CLASE 2   */
+/*
 console.log("Hola desde Node JS");
 console.log(" "); console.log(" "); console.log(" ");
+*/
+
+
 
 
 
 /*   CLASE 3   */
+/*
 // 1) Creamos un array con 10 precios
 const precios = [100, 250, 320, 50, 600, 1200, 75, 430, 890, 150];
 
@@ -22,10 +27,14 @@ function mostrarResultados(array) {
 
 mostrarResultados(preciosConIVA);
 console.log(" "); console.log(" "); console.log(" ");
+*/
+
+
 
 
 
 /*   CLASE 4   */
+/*
 // Mision 1:
 // 1)
 class Automovil {
@@ -75,3 +84,38 @@ function cantidadDeAutosDeColor(autos, color) {
 }
 
 console.log(`Cantidad de autos de color Azul: ${cantidadDeAutosDeColor(autos, 'Azul')} `);
+*/
+
+
+
+
+
+/*   CLASE 5   */
+/*
+import { argv } from "node:process";
+
+
+if (argv.includes(`GET`)) {
+    console.log(`Toma un dato`);
+}
+
+if (argv.includes(`POST`)) {
+    console.log(`Recibimos ${argv[3]} satisfactoriamente`);
+}
+
+if (argv.includes(`PUT`)) {
+    console.log(`Modificamos el item con id: ${argv[3]} satisfactoriamente`);
+}
+
+if (argv.includes(`DELETE`)) {
+    console.log(`El item con el id: ${argv[3]} se eliminó con éxito`);
+}
+*/
+
+
+
+
+
+/*   CLASE 6   */
+fetch("https://fakestoreapi.com/products")
+  .then((res) => {res});

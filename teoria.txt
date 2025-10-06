@@ -215,3 +215,84 @@ $npm uninstall [paquete]
 
 [[[  Rutas  ]]]
 
+
+
+
+
+##############################  CLASE 6  ##############################
+
+[[[  Asíncronismo  ]]]
+Es un paradigma que permite ejecutar tareas en segundo plano sin bloquear el programa principal.
+JavaScript: Lenguaje basado en eventos que utiliza callbacks, promesas y async/await.
+
+
+[[[  Single Thread en JavaScript  ]]]
+* Ejecución Secuencial: JavaScript ejecuta tareas en una sola secuencia de comandos.
+* Event Loop: Maneja la cola de tareas para ejecutar operaciones asincrónicas.
+* Call Stack: Estructura que registra las funciones en ejecución.
+
+
+[[[  Callback Queue  ]]]
+(Llamado a funciones en segundo plano)
+* Almacenamiento: Guarda funciones callback y resultados de tareas asincrónicas.
+* Ejecución: El Event Loop ejecuta las funciones cuando el Call Stack está vacío.
+* Ejemplo: Consultas a APIs externas se manejan en la Callback Queue.
+
+
+[[[  Callback  ]]]
+* Funcion que cuando termina ejecuta otra funcion (pasada por parametro).
+* Ejemplo:
+        const fs = require("fs");
+
+        console.log("algo");                                  //se ejecuta primero
+        fs.readFile("./data.txt", "utf8", (error, data) => {  //se ejecuta ultimo
+            console.log("error");
+            console.log("data");
+        });
+        console.log("algo");                                  //se ejecuta segundo
+
+
+
+[[[  Promesas  ]]]
+* Ejemplo:
+        const promesa = new Promise((resolve, reject) => {  // O se resuelve, o se rechaza
+            if(algo) {
+                resolver("Resuelto");
+            } else {
+                reject("Rechazado");
+            }
+        });
+
+        promesa
+            .then((response) => {      // Si la promesa resuelve va por acá
+                console.log(response);
+            })
+            .catch((error) => {
+                console.error(error);  // Si la promesa rechaza va por acá
+            })
+            .finally(() => console.log("Siempre se ejecuta"));
+
+
+
+[[[  Fetch  ]]]
+fetch("https://fakestoreapi.com/products")
+    .then((res) => {res})
+    .catch((error) => {error})
+    .finally(() => {algo});
+
+
+
+[[[  Async/Await  ]]]
+* asincrónica no bloqueante
+* Ejemplo:
+        const respuesta = await fetch("https://fakestoreapi.com/products");  
+                    //el await espera a que se resuelva la promesa y luego pasa la resolucion o rechazo (no bloquea)
+
+* Catch para el Async/Await: 
+        try {
+            const respuesta = await fetch("https://fakestoreapi.com/products"); 
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
