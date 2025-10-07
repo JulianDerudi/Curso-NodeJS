@@ -291,7 +291,7 @@ fetch("https://fakestoreapi.com/products")
 * Catch para el Async/Await: 
         try {
             const respuesta = await fetch("https://fakestoreapi.com/products"); 
-            const data = await response.json();
+            const data = await respuesta.json();   // si no pongo await aca va a aparecer como que esta pendiente el resultado
             console.log(data);
         } catch (error) {
             console.log(error);
