@@ -1,5 +1,5 @@
 import { argv } from "node:process";
-
+// algo
 
 // if (argv.includes(`GET`)) {
 // console.log(`Toma un dato`);
