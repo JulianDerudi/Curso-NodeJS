@@ -296,3 +296,30 @@ fetch("https://fakestoreapi.com/products")
         } catch (error) {
             console.log(error);
         }
+
+
+
+
+##############################  CLASE 7  ##############################
+
+* TCP, IP, DNS, Modelo CLiente/Servidor, HTTP(protocolo de comunicacion)
+
+##############################  CLASE 8  ##############################
+
+* mas cosas teoricas
+
+##############################  CLASE 9  ##############################
+
+* CREAR UN SERVIDOR 
+    import http from "http";
+
+    const server = http.createServer((req, res) => {
+        console.log(req);                            // nomas para mostrarlo
+        res.statusCode = 200;                        // todo OK
+        res.setHeader("Content-Type", "text/plain"); // "Cambia el tipo de contenido por texto plano"
+        res.end("Hola desde HTTP");                  // Corta comunicacion
+    });
+
+    const PORT = 3000;
+
+    server.listen(PORT, () => console.log(`http://localhost:${PORT}`));
