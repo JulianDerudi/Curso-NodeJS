@@ -323,3 +323,27 @@ fetch("https://fakestoreapi.com/products")
     const PORT = 3000;
 
     server.listen(PORT, () => console.log(`http://localhost:${PORT}`));
+
+
+
+
+##############################  CLASE 10  ##############################
+
+* MODELADO DE API REST
+
+>>>>> carpeta "apirest" <<<<<
+
+* ROUTES:
+    - Las rutas se construyen combinando una URL específica con un método HTTP.
+
+* CONTROLLERS:
+    - Son los responsables de manejar la lógica que conecta las rutas con el resto 
+      de la aplicación, actuando como un puente entre las solicitudes del cliente y 
+      los datos o servicios que necesitamos usar.
+
+* MODELO:
+    - Todo el manejo de datos, son como los planos de una máquina: describen la 
+      estructura de los datos y su interacción con la base de datos.
+
+* SERVICE:
+    - Un intermedio entre los controladores y los modelos
