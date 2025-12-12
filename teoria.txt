@@ -347,3 +347,17 @@ fetch("https://fakestoreapi.com/products")
 
 * SERVICE:
     - Un intermedio entre los controladores y los modelos
+
+
+
+##############################  CLASE 11  ##############################
+
+* CORS
+    - Permite que otras personas puedan acceder a mi servidor (mi puerto)
+    - Mecanismo que permite acceso a recursos desde un dominio diferente al del documento.
+
+
+
+##############################  CLASE 12  ##############################
+
+* API REST MAS A FONDO (si tocar Models de momento)
